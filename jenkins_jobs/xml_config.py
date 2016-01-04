@@ -125,3 +125,9 @@ class XmlJobGenerator(object):
         for module in self.registry.modules:
             if hasattr(module, 'gen_xml'):
                 module.gen_xml(xml, data)
+
+
+__all__ = [
+    XmlJobGenerator,
+    XmlJob
+]

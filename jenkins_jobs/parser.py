@@ -336,3 +336,8 @@ class YamlParser(object):
         # The \n\n is not hard coded, because they get stripped if the
         # project does not otherwise have a description.
         return "\n\n" + MAGIC_MANAGE_STRING
+
+
+__all__ = [
+    YamlParser
+]

@@ -243,3 +243,7 @@ class ModuleRegistry(object):
             raise JenkinsJobsException("Unknown entry point or macro '{0}' "
                                        "for component type: '{1}'.".
                                        format(name, component_type))
+
+__all__ = [
+    ModuleRegistry
+]
