@@ -57,8 +57,8 @@ class XmlJob(object):
 
 
 class XmlJobGenerator(object):
-    """ This class is responsible for generating Jenkins Configuration XML from
-    a compatible intermediate representation of Jenkins Jobs.
+    """ This class is responsible for generating Jenkins job configuration
+    objects from a compatible intermediate representation of Jenkins Jobs.
     """
 
     def __init__(self, registry):

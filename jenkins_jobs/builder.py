@@ -38,6 +38,11 @@ _DEFAULT_TIMEOUT = object()
 
 
 class CacheStorage(object):
+    """ Disclaimer: Not intended for use by third party "API" users of JJB.
+
+    Manages the caching behavior of various interactions between the Builder
+    and the Jenkins instance.
+    """
     # ensure each instance of the class has a reference to the required
     # modules so that they are available to be used when the destructor
     # is being called since python will not guarantee that it won't have
@@ -114,6 +119,10 @@ class CacheStorage(object):
 
 
 class Jenkins(object):
+    """ Disclaimer: Not intended for use by third party "API" users of JJB.
+
+    Lightweight wrapper around the jenkins.Jenkins class.
+    """
     def __init__(self, url, user, password, timeout=_DEFAULT_TIMEOUT):
         if timeout != _DEFAULT_TIMEOUT:
             self.jenkins = jenkins.Jenkins(url, user, password, timeout)
@@ -208,6 +217,9 @@ class Jenkins(object):
 
 
 class Builder(object):
+    """ The Builder class is responsible for carrying out different tasks
+    against a Jenkins instance.
+    """
     def __init__(self, jjb_config):
         self.jenkins = Jenkins(jjb_config.jenkins['url'],
                                jjb_config.jenkins['user'],
