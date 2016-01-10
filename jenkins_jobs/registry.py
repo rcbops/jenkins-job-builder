@@ -35,6 +35,7 @@ class ModuleRegistry(object):
         self.modules_by_component_type = {}
         self.handlers = {}
         self.jjb_config = jjb_config
+        self.__parser_data = {}
 
         if plugins_list is None:
             self.plugins_dict = {}
